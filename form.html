@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>PHPCalc</title>
+</head>
+<body>
+
+    <form action="ex18Calculadora.php" method="POST">
+        
+        <label>
+            Numero 1:
+        </label>
+        <input type="number" name="num1">
+        <br>
+        <label>
+            Numero 2:
+        </label>
+        <input type="number" name="num2">
+        <br>
+        <label>
+            Operações:
+        </label>
+        <ul>
+            <li>
+                Soma: <input type="radio" name="op" value="soma">
+            </li>
+            <li>
+                Subtração: <input type="radio" name="op" value="sub">
+            </li>
+            <li>
+                Multiplicação: <input type="radio" name="op" value="multi">
+            </li>
+            <li>
+                Divisão: <input type="radio" name="op" value="div">
+            </li>
+        </ul>
+
+        <input type="submit">
+        
+
+    </form>
+
+</body>
+</html>
