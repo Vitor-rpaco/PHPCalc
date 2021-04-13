@@ -15,30 +15,80 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($numero2 != "" and is_numeric($numero2)) {
         $numero2val = 1;
     }
+    if($operacao == "quadrado"){
+        $numero2val = 1;
+    }
 }
+
+//************************CÁLCULOS***************************
+
+function soma($a, $b){
+    return $a + $b;
+}
+
+function multi($a, $b){
+    return $a * $b;
+}
+
+function sub($a, $b){
+    return $a - $b;
+}
+
+function div($a, $b){
+    return $a / $b;
+}
+
+function quadrado($a){
+    return ($a * $a);
+}
+
+function raizQuadrada($a){
+    return sqrt($a);
+}
+
+function potencia($a, $b){
+
+    return pow($a, $b);
+}
+//***********************************************************
 
 //Faz operação selecionada SE valores do FORM forem numéricos
 if($numero1val == 1 and $numero2val == 1){
 
     switch($operacao){
         case "soma":
-            $result = $numero1 + $numero2;
+            $result = soma($numero1, $numero2);
             echo "$numero1 + $numero2 = $result";
             break;
 
         case "multi":
-            $result = $numero1 * $numero2;
+            $result = multi($numero1, $numero2);
             echo "$numero1 * $numero2 = $result";
             break;
 
         case "sub":
-            $result = $numero1 - $numero2;
+            $result = sub($numero1, $numero2);
             echo "$numero1 - $numero2 = $result";
             break;
 
         case "div":
-            $result = $numero1 / $numero2;
+            $result = div($numero1, $numero2);
             echo "$numero1 / $numero2 = $result";
+            break;
+
+        case "quadrado":
+            $result = quadrado($numero1);
+            echo "$numero1 ^ 2 = $result";
+            break;
+
+        case "raiz":
+            $result = raizQuadrada($numero1);
+            echo "raiz de $numero1 = $result";
+            break;
+
+        case "potenciacao":
+            $result = potencia($numero1, $numero2);
+            echo "$numero1 ^ $numero2 = $result";
             break;
 
         default:
@@ -48,7 +98,7 @@ if($numero1val == 1 and $numero2val == 1){
 }
 
 ?>
-
+<!--******************************************************-->
 <html>
     <body>
         <button onclick="redirect()">Retornar</button>

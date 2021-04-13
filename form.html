@@ -12,17 +12,15 @@
         <label>
             Numero 1:
         </label>
-        <input type="number" name="num1">
+        <input id="numero1input" type="number" name="num1">
         <br>
         <label>
             Numero 2:
         </label>
-        <input type="number" name="num2">
+        <input id="numero2input" type="number" name="num2">
         <br>
-        <label>
-            Operações:
-        </label>
         <ul>
+            <header>----OPERAÇÕES----</header>
             <li>
                 Soma: <input type="radio" name="op" value="soma">
             </li>
@@ -35,12 +33,27 @@
             <li>
                 Divisão: <input type="radio" name="op" value="div">
             </li>
+            <li>
+                Quadrado: <input type="radio" onclick="numero2()" name="op" value="quadrado">
+            </li>
+            <li>
+                Raiz quadrada: <input type="radio" onclick="numero2()" name="op" value="raiz">
+            </li>
+            <li>
+                Potenciação: <input type="radio" name="op" value="potenciacao">
+            </li>
         </ul>
 
         <input type="submit">
         
-
     </form>
 
 </body>
+
+<script>
+    function numero2(){
+        document.getElementById('numero2input').value = 2;
+    }
+</script>
+
 </html>
