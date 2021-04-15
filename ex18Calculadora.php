@@ -50,6 +50,16 @@ function potencia($a, $b){
 
     return pow($a, $b);
 }
+
+function porcent($a, $b){
+
+    return (($a * $b)/100);
+}
+
+function rest($a, $b){
+
+    return ($a % $b);
+}
 //***********************************************************
 
 //Faz operação selecionada SE valores do FORM forem numéricos
@@ -89,6 +99,16 @@ if($numero1val == 1 and $numero2val == 1){
         case "potenciacao":
             $result = potencia($numero1, $numero2);
             echo "$numero1 ^ $numero2 = $result";
+            break;
+
+        case "porcent":
+            $result = porcent($numero1, $numero2);
+            echo "$numero2% de $numero1 = $result";
+            break;
+
+        case "resto":
+            $result = rest($numero1, $numero2);
+            echo "$numero1 / $numero2 tem resto = $result";
             break;
 
         default:
